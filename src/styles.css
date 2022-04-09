@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+/* Import fontawesome css */
+@import url("https://use.fontawesome.com/releases/v5.0.6/css/all.css");
+/* Import bootstrap css */
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} /* End of reset */
+html,
+body {
+  scroll-behavior: smooth;
+  height: 100%;
+}
