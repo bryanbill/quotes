@@ -2,5 +2,7 @@ export interface QuoteModel {
   id: number;
   quote: string;
   author: string;
-  created_at: Date;
+  createdOn: Date;
+  upVotes: number;
+  downVotes: number;
 }
