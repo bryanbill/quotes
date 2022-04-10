@@ -22,7 +22,7 @@
       </div>
       <div class="col-md-4 ">
         <h4>All Time Favorite</h4>
-        <div class="card bg-secondary text-white h-100 ">
+        <div class="card bg-secondary text-white h-100 " appHighlight>
           <div class="card-body d-flex justify-content-around flex-column">
             <h5 class="card-title">{{favoriteQuote().author}}</h5>
             <p class="card-text">
@@ -35,7 +35,7 @@
                 <i class="fa fa-thumbs-down"></i>
                 <span class="ml-2">{{favoriteQuote().downVotes}}</span>
               </div>
-              <a href="#" class="btn btn-primary"><i class="fa fa-trash"></i></a>
+              <span>{{favoriteQuote().createdOn | timeago}}</span>
             </div>
           </div>
         </div>
@@ -43,12 +43,12 @@
     </div>
   </section>
   <!-- Create Quote Modal -->
-  <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">Post Quote</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
         </div>
         <div class="modal-body">
           <app-form (newQuoteEvent)="pushQuote($event)"></app-form>

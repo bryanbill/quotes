@@ -7,9 +7,10 @@ import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
 import { TimeagoPipe } from './services/timeago.service';
 import { QuotesComponent } from './quotes/quotes.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
-  declarations: [AppComponent, FormComponent, TimeagoPipe, QuotesComponent],
+  declarations: [AppComponent, FormComponent, TimeagoPipe, QuotesComponent, HighlightDirective],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

@@ -13,10 +13,13 @@ body {
   height: 100%;
 }
 .btn-primary {
-  background-color: #ED6E6E;
+  background-color: #ed6e6e;
   border-color: #f8f9fa;
 }
 
-.btn-primary:hover, :focus{
-    background-color: #efb9b9
+.btn-primary:hover {
+  background-color: #efb9b9;
+}
+.backdrop {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGXX_khuSMMLASNZSLkIgobn9G2LegZ1uW1_ltwloGdIa8is9xhhfYu-VRTRzuy31vkbs&usqp=CAU");
 }

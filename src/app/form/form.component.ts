@@ -1,6 +1,5 @@
-
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { QuoteModel } from '../models/quote.model';
+import { QuoteModel, Quote } from '../models/quote.model';
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
@@ -16,14 +15,14 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {}
 
   public createQuote(): void {
-    const quote: QuoteModel = {
-      id: Date.now().toString(),
-      quote: this.quote,
-      author: this.author,
-      createdOn: new Date(),
-      upVotes: 0,
-      downVotes: 0,
-    };
+    const quote: QuoteModel = new Quote(
+      Date.now().toString(),
+      this.quote,
+      this.author,
+      new Date(),
+      0,
+      0
+    );
     this.newQuoteEvent.emit(quote);
   }
 }
