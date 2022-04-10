@@ -7,7 +7,8 @@ export const QUOTES: QuoteModel[] = [
     'Marilyn Monroe',
     new Date('2022-01-01'),
     0,
-    0
+    0,
+    'anonymous'
   ),
   new Quote(
     '2',
@@ -15,6 +16,7 @@ export const QUOTES: QuoteModel[] = [
     'Oscar Wilde',
     new Date('2021-11-01'),
     0,
-    0
+    0,
+    'Willock'
   ),
 ];

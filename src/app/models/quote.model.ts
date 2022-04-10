@@ -5,6 +5,7 @@ export interface QuoteModel {
   createdOn: Date;
   upVotes: number;
   downVotes: number;
+  submittedBy: string;
 }
 
 export class Quote implements QuoteModel {
@@ -13,6 +14,7 @@ export class Quote implements QuoteModel {
   author: string;
   createdOn: Date;
   upVotes: number;
+  submittedBy: string;
   downVotes: number;
   constructor(
     id: string,
@@ -20,12 +22,14 @@ export class Quote implements QuoteModel {
     author: string,
     createdOn: Date,
     upVotes: number,
-    downVotes: number
+    downVotes: number,
+    submittedBy: string
   ) {
     this.id = id;
     this.quote = quote;
     this.author = author;
     this.createdOn = createdOn;
+    this.submittedBy = submittedBy;
     this.upVotes = upVotes;
     this.downVotes = downVotes;
   }

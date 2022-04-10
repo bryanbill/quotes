@@ -23,3 +23,6 @@ body {
 .backdrop {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGXX_khuSMMLASNZSLkIgobn9G2LegZ1uW1_ltwloGdIa8is9xhhfYu-VRTRzuy31vkbs&usqp=CAU");
 }
+.pull-right {
+  float: right;
+}

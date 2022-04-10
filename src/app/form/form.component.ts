@@ -8,6 +8,7 @@ import { QuoteModel, Quote } from '../models/quote.model';
 export class FormComponent implements OnInit {
   quote!: string;
   author!: string;
+  submittedBy!: string;
 
   @Output() newQuoteEvent = new EventEmitter<QuoteModel>();
   constructor() {}
@@ -15,14 +16,19 @@ export class FormComponent implements OnInit {
   ngOnInit(): void {}
 
   public createQuote(): void {
-    const quote: QuoteModel = new Quote(
-      Date.now().toString(),
-      this.quote,
-      this.author,
-      new Date(),
-      0,
-      0
-    );
-    this.newQuoteEvent.emit(quote);
+    if (this.author && this.quote && this.submittedBy) {
+      const quote: QuoteModel = new Quote(
+        Date.now().toString(),
+        this.quote,
+        this.author,
+        new Date(),
+        0,
+        0,
+        this.submittedBy
+      );
+      this.newQuoteEvent.emit(quote);
+    } else {
+      alert('Fill all the fields');
+    }
   }
 }
