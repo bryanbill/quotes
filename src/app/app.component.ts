@@ -16,4 +16,11 @@ export class AppComponent {
   pushQuote(quote: QuoteModel): void {
     this.quotes.push(quote);
   }
+
+  favoriteQuote(): QuoteModel {
+    return this.quotes.filter(
+      (quote) =>
+        quote.upVotes === Math.max(...this.quotes.map((quote) => quote.upVotes))
+    )[0];
+  }
 }
