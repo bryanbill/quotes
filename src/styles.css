@@ -14,3 +14,11 @@ body {
   scroll-behavior: smooth;
   height: 100%;
 }
+.btn-primary {
+  background-color: #ED6E6E;
+  border-color: #f8f9fa;
+}
+
+.btn-primary:hover, :focus{
+    background-color: #efb9b9
+}
