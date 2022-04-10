@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { QuoteModel } from '../models/quote.model';
 @Component({
   selector: 'app-form',
@@ -9,6 +9,7 @@ export class FormComponent implements OnInit {
   private quote!: string;
   private author!: string;
 
+  @Output() newQuoteEvent = new EventEmitter<QuoteModel>();
   constructor() {}
 
   ngOnInit(): void {}
