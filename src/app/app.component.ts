@@ -8,7 +8,7 @@ import { QuoteModel } from './models/quote.model';
 })
 export class AppComponent {
   title = 'quotes';
-  private quotes: QuoteModel[] = [
+  quotes: QuoteModel[] = [
     {
       id: Date.now().toString(),
       quote: `I'm selfish, impatient and a little insecure. 

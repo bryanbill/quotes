@@ -6,8 +6,8 @@ import { QuoteModel } from '../models/quote.model';
   styleUrls: ['./form.component.css'],
 })
 export class FormComponent implements OnInit {
-  private quote!: string;
-  private author!: string;
+   quote!: string;
+   author!: string;
 
   @Output() newQuoteEvent = new EventEmitter<QuoteModel>();
   constructor() {}

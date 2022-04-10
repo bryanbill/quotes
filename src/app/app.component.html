@@ -8,7 +8,7 @@
         </p>
         <hr class="my-4">
         <p>
-          <a class="btn btn-primary btn-lg" role="button">Create Quote</a>
+          <a class="btn btn-primary btn-lg" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Create Quote</a>
         </p>
       </div>
     </div>
@@ -16,7 +16,7 @@
   <section id="quotes" class="w-75 mx-auto">
     <div class="row h-100">
       <div class="col-md-8">
-        <h1>All Quotes</h1>
+        <h4>All Quotes</h4>
         <div class="row">
           <div class="col-md-6">
             <div class="card">
@@ -59,19 +59,19 @@
         </div>
       </div>
       <div class="col-md-4">
-        <h1>All Time Favorites</h1>
+        <h4>All Time Favorite</h4>
         <div class="card bg-secondary text-white">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
+            <h5 class="card-title">{{quotes[0].author}}</h5>
             <p class="card-text">
-              Some quick example text to build on the card title and make up the bulk of the card's content.
+              {{quotes[0].quote}}
             </p>
             <div class="d-flex w-100 justify-content-between align-items-center">
               <div class="d-flex w-25  align-items-center justify-content-between">
                 <i class="fa fa-thumbs-up"></i>
-                <span class="ml-2">12</span>
+                <span class="ml-2">{{quotes[0].upVotes}}</span>
                 <i class="fa fa-thumbs-down"></i>
-                <span class="ml-2">12</span>
+                <span class="ml-2">{{quotes[0].downVotes}}</span>
               </div>
               <a href="#" class="btn btn-primary"><i class="fa fa-trash"></i></a>
             </div>
@@ -91,7 +91,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <app-form (newQuoteEvent)="createQuote($event)"></app-form>
+        <app-form (newQuoteEvent)="pushQuote($event)"></app-form>
 
       </div>
 
