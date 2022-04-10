@@ -27,8 +27,14 @@ export class FormComponent implements OnInit {
         this.submittedBy
       );
       this.newQuoteEvent.emit(quote);
+      this.emptyFields();
     } else {
       alert('Fill all the fields');
     }
+  }
+  emptyFields(): void {
+    this.author = '';
+    this.quote = '';
+    this.submittedBy = '';
   }
 }
