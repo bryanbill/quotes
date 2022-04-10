@@ -7,7 +7,7 @@ export interface QuoteModel {
   downVotes: number;
 }
 
-export class QuoteModel implements QuoteModel {
+export class Quote implements QuoteModel {
   id: string;
   quote: string;
   author: string;

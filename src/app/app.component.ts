@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { QuoteModel } from './models/quote.model';
+import { QUOTES } from './quote.mock';
+import { QuotesComponent } from './quotes/quotes.component';
 
 @Component({
   selector: 'app-root',
@@ -8,27 +10,7 @@ import { QuoteModel } from './models/quote.model';
 })
 export class AppComponent {
   title = 'quotes';
-  quotes: QuoteModel[] = [
-    {
-      id: Date.now().toString(),
-      quote: `I'm selfish, impatient and a little insecure. 
-        I make mistakes, I am out of control and at times hard to handle.
-         But if you can't handle me at my worst, then you sure as hell don't 
-         deserve me at my best.`,
-      author: 'Marilyn Monroe',
-      createdOn: new Date(),
-      upVotes: 0,
-      downVotes: 0,
-    },
-    {
-      id: Date.now().toString(),
-      quote: `I'm selfish, impatient and a little insecure.`,
-      author: 'Marilyn Monroe',
-      createdOn: new Date(),
-      upVotes: 0,
-      downVotes: 0,
-    },
-  ];
+  quotes: QuoteModel[] = QUOTES;
   constructor() {}
 
   pushQuote(quote: QuoteModel): void {
