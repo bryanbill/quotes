@@ -1,3 +1,4 @@
+
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { QuoteModel } from '../models/quote.model';
 @Component({
@@ -6,8 +7,8 @@ import { QuoteModel } from '../models/quote.model';
   styleUrls: ['./form.component.css'],
 })
 export class FormComponent implements OnInit {
-   quote!: string;
-   author!: string;
+  quote!: string;
+  author!: string;
 
   @Output() newQuoteEvent = new EventEmitter<QuoteModel>();
   constructor() {}
@@ -23,5 +24,6 @@ export class FormComponent implements OnInit {
       upVotes: 0,
       downVotes: 0,
     };
+    this.newQuoteEvent.emit(quote);
   }
 }

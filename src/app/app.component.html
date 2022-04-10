@@ -8,8 +8,8 @@
         </p>
         <hr class="my-4">
         <p>
-          <a class="btn btn-primary btn-lg" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Create
-            Quote</a>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Create Quote</button>
+
         </p>
       </div>
     </div>
@@ -42,21 +42,21 @@
       </div>
     </div>
   </section>
-</main>
+  <!-- Create Quote Modal -->
+  <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Post Quote</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <app-form (newQuoteEvent)="pushQuote($event)"></app-form>
 
-<!-- Create Quote Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Post Quote</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
       </div>
-      <div class="modal-body">
-        <app-form (newQuoteEvent)="pushQuote($event)"></app-form>
-
-      </div>
-
     </div>
   </div>
-</div>
+
+</main>
