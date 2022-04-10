@@ -20,6 +20,14 @@ export class AppComponent {
       upVotes: 0,
       downVotes: 0,
     },
+    {
+      id: Date.now().toString(),
+      quote: `I'm selfish, impatient and a little insecure.`,
+      author: 'Marilyn Monroe',
+      createdOn: new Date(),
+      upVotes: 0,
+      downVotes: 0,
+    },
   ];
   constructor() {}
 

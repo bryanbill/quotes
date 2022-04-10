@@ -21,4 +21,8 @@ export class QuotesComponent implements OnInit {
     // Increase the quote's upVotes by 1
     quote.upVotes++;
   }
+  deleteQuote(quote: QuoteModel): void {
+    // Remove the quote from the quotes array
+    this.quotes = this.quotes.filter((q) => q !== quote);
+  }
 }
