@@ -8,7 +8,8 @@
         </p>
         <hr class="my-4">
         <p>
-          <a class="btn btn-primary btn-lg" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Create Quote</a>
+          <a class="btn btn-primary btn-lg" role="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Create
+            Quote</a>
         </p>
       </div>
     </div>
@@ -18,44 +19,8 @@
       <div class="col-md-8">
         <h4>All Quotes</h4>
         <div class="row">
-          <div class="col-md-6">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the card's content.
-                </p>
-                <div class="d-flex w-100 justify-content-between align-items-center">
-                  <div class="d-flex w-25  align-items-center justify-content-between">
-                    <i class="fa fa-thumbs-up"></i>
-                    <span class="ml-2">12</span>
-                    <i class="fa fa-thumbs-down"></i>
-                    <span class="ml-2">12</span>
-                  </div>
-                  <a href="#" class="btn btn-primary"><i class="fa fa-trash"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up the bulk of the card's content.
-                </p>
-                <div class="d-flex w-100 justify-content-between align-items-center">
-                  <div class="d-flex w-25  align-items-center justify-content-between">
-                    <i class="fa fa-thumbs-up"></i>
-                    <span class="ml-2">12</span>
-                    <i class="fa fa-thumbs-down"></i>
-                    <span class="ml-2">12</span>
-                  </div>
-                  <a href="#" class="btn btn-primary"><i class="fa fa-trash"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
+          <app-quotes [quotes]='quotes'></app-quotes>
+
         </div>
       </div>
       <div class="col-md-4">

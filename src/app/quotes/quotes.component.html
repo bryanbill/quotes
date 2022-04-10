@@ -1,1 +1,20 @@
-<p>quotes works!</p>
+<div class="col-md-6" *ngFor="let quote of quotes">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{quote.author}}</h5>
+            <p class="card-text">
+                {{quote.quote}}
+            </p>
+            <p class="text-muted">{{quote.createdOn | timeago}}</p>
+            <div class="d-flex w-100 justify-content-between align-items-center">
+                <div class="d-flex w-25  align-items-center justify-content-between">
+                    <i class="fa fa-thumbs-up" (click)="upVote(quote)"></i>
+                    <span class="ml-2"> {{quote.upVotes}}</span>
+                    <i class="fa fa-thumbs-down" (click)="downVote(quote)"></i>
+                    <span class="ml-2"> {{quote.downVotes}}</span>
+                </div>
+                <a href="#" class="btn btn-primary"><i class="fa fa-trash"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
