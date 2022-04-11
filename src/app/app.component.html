@@ -14,31 +14,15 @@
       </div>
     </div>
   </section>
-  <section id="quotes" class="w-75 mx-auto h-25">
-    <div class="row h-100">
+  <section id="quotes" class="w-75 mx-auto">
+    <div class="row">
       <div class="col-md-8">
         <h4>All Quotes</h4>
         <app-quotes [quotes]='quotes'></app-quotes>
       </div>
-      <div class="col-md-4 ">
+      <div class="col-md-4">
         <h4>All Time Favorite</h4>
-        <div class="card bg-secondary text-white h-100 " appHighlight>
-          <div class="card-body d-flex justify-content-around flex-column">
-            <h5 class="card-title">{{favoriteQuote().author}}</h5>
-            <p class="card-text">
-              {{favoriteQuote().quote}}
-            </p>
-            <div class="d-flex w-100 justify-content-between align-items-center">
-              <div class="d-flex w-25  align-items-center justify-content-between">
-                <i class="fa fa-thumbs-up"></i>
-                <span class="ml-2">{{favoriteQuote().upVotes}}</span>
-                <i class="fa fa-thumbs-down"></i>
-                <span class="ml-2">{{favoriteQuote().downVotes}}</span>
-              </div>
-              <span>{{favoriteQuote().createdOn | timeago}}</span>
-            </div>
-          </div>
-        </div>
+        <app-favorite [quote]='favoriteQuote()' appHighlight></app-favorite>
       </div>
     </div>
   </section>
@@ -47,14 +31,12 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Post Quote</h5>
+          <h5 class="modal-title">Create Quote</h5>
           <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
         </div>
         <div class="modal-body">
           <app-form (newQuoteEvent)="pushQuote($event)"></app-form>
-
         </div>
-
       </div>
     </div>
   </div>

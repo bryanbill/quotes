@@ -13,13 +13,22 @@ export class TimeagoPipe {
       return 'just now';
     } else if (diff < 60 * 60) {
       // If less than an hour, return minutes
-      return Math.floor(diff / 60) + ' minutes ago';
+      return Math.floor(diff / 60) + ' mins ago';
     } else if (diff < 60 * 60 * 24) {
       // If less than a day, return hours
-      return Math.floor(diff / (60 * 60)) + ' hours ago';
-    } else {
-      // If more than a day, return days
+      return Math.floor(diff / (60 * 60)) + ' hs ago';
+    } else if (diff < 60 * 60 * 24 * 7) {
+      // If less than a week, return days
       return Math.floor(diff / (60 * 60 * 24)) + ' days ago';
+    } else if (diff < 60 * 60 * 24 * 7 * 4) {
+      // If less than a month, return weeks
+      return Math.floor(diff / (60 * 60 * 24 * 7)) + ' weeks ago';
+    } else if (diff < 60 * 60 * 24 * 7 * 4 * 12) {
+      // If less than a year, return months
+      return Math.floor(diff / (60 * 60 * 24 * 7 * 4)) + ' months ago';
+    } else {
+      // If more than a year, return years
+      return Math.floor(diff / (60 * 60 * 24 * 7 * 4 * 12)) + ' years ago';
     }
   }
 }
